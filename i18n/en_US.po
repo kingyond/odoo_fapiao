@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo-fapiao
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 08:00+0000\n"
+"PO-Revision-Date: 2023-11-20 08:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: odoo-fapiao
+#: model:ir.model.fields,field_description:odoo-fapiao.field_account_move__cn_fapiao_code
+msgid "Invoice Code"
+msgstr "Invoice Code"
+
+#. module: odoo-fapiao
+#: model:ir.model.fields,field_description:odoo-fapiao.field_account_move__cn_fapiao_number
+msgid "Invoice Number"
+msgstr "Invoice Number"
+
+#. module: odoo-fapiao
+#: model:ir.model.fields,field_description:odoo-fapiao.field_account_move__cn_fapiao_type
+msgid "Invoice Type"
+msgstr "Invoice Type"
+
+#. module: odoo-fapiao
+#: model:ir.model.fields.selection,name:odoo-fapiao.selection__account_move__cn_fapiao_type__none
+#: model_terms:ir.ui.view,arch_db:odoo-fapiao.cn_fapiao_account_move_search
+msgid "No Invoice Required"
+msgstr "No Invoice Required"
+
+#. module: odoo-fapiao
+#: model:ir.model.fields.selection,name:odoo-fapiao.selection__account_move__cn_fapiao_type__special
+#: model_terms:ir.ui.view,arch_db:odoo-fapiao.cn_fapiao_account_move_search
+msgid "Special VAT Invoice"
+msgstr "Special VAT Invoice"
+
+#. module: odoo-fapiao
+#: model:ir.model.fields.selection,name:odoo-fapiao.selection__account_move__cn_fapiao_type__general
+#: model_terms:ir.ui.view,arch_db:odoo-fapiao.cn_fapiao_account_move_search
+msgid "General VAT Invoice"
+msgstr "General VAT Invoice"
+
+#. module: odoo-fapiao
+#: model_terms:ir.ui.view,arch_db:odoo-fapiao.cn_fapiao_account_move_form
+msgid "China Invoice Information"
+msgstr "China Invoice Information"
+
+#. module: odoo-fapiao
+#: model:ir.model,name:odoo-fapiao.model_account_move
+msgid "Journal Entry"
+msgstr "Journal Entry"
+
+#. module: odoo-fapiao
+#: model_terms:ir.ui.view,arch_db:odoo-fapiao.cn_fapiao_account_move_search
+msgid "Invoice Type"
+msgstr "Invoice Type"

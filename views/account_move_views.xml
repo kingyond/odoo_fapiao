@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 客户发票表单视图继承 -->
+    <record id="cn_fapiao_account_move_form" model="ir.ui.view">
+        <field name="name">account.move.form.cn.fapiao</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <!-- 将所有发票相关字段放在一起，按顺序显示，交换发票代码和发票编号的位置 -->
+            <xpath expr="//field[@name='invoice_date']" position="after">
+                <field name="cn_fapiao_type" invisible="move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')" widget="radio" options="{'horizontal': true}"/>
+                <field name="cn_fapiao_number" invisible="cn_fapiao_type == 'none' or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')" placeholder="发票编号"/>
+                <field name="cn_fapiao_code" invisible="cn_fapiao_type == 'none' or move_type not in ('out_invoice', 'out_refund', 'in_invoice', 'in_refund')" placeholder="发票代码"/>
+            </xpath>
+            
+            <!-- 移除之前在payment_reference后添加的字段，使用上面的统一布局 -->
+        </field>
+    </record>
+    
+    <!-- 发票搜索视图继承 -->
+    <record id="cn_fapiao_account_move_search" model="ir.ui.view">
+        <field name="name">account.move.search.cn.fapiao</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_move_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="cn_fapiao_code"/>
+                <field name="cn_fapiao_number"/>
+                <filter string="No Invoice Required" name="cn_fapiao_none" domain="[('cn_fapiao_type', '=', 'none')]"/>
+                <filter string="Special VAT Invoice" name="cn_fapiao_special" domain="[('cn_fapiao_type', '=', 'special')]"/>
+                <filter string="General VAT Invoice" name="cn_fapiao_general" domain="[('cn_fapiao_type', '=', 'general')]"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter string="Invoice Type" name="cn_fapiao_type" context="{'group_by': 'cn_fapiao_type'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
