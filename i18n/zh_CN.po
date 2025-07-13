@@ -37,16 +37,19 @@ msgstr "发票类型"
 
 #. module: odoo_fapiao
 #: model:ir.model.fields.selection,name:odoo_fapiao.selection__account_move__cn_fapiao_type__none
+#: model_terms:ir.ui.view,arch_db:odoo_fapiao.cn_fapiao_account_move_search
 msgid "No Invoice Required"
 msgstr "无需开票"
 
 #. module: odoo_fapiao
 #: model:ir.model.fields.selection,name:odoo_fapiao.selection__account_move__cn_fapiao_type__special
+#: model_terms:ir.ui.view,arch_db:odoo_fapiao.cn_fapiao_account_move_search
 msgid "Special VAT Invoice"
 msgstr "专用发票"
 
 #. module: odoo_fapiao
-#: model:ir.model.fields.selection,name:odoo_fapiao.selection__account_move__cn_fapiao_type__normal
+#: model:ir.model.fields.selection,name:odoo_fapiao.selection__account_move__cn_fapiao_type__general
+#: model_terms:ir.ui.view,arch_db:odoo_fapiao.cn_fapiao_account_move_search
 msgid "General VAT Invoice"
 msgstr "普通发票"
 

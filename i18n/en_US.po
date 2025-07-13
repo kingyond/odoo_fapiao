@@ -49,3 +49,9 @@ msgstr "Special VAT Invoice"
 #: model:ir.model.fields.selection,name:odoo_fapiao.selection__account_move__cn_fapiao_type__normal
 msgid "General VAT Invoice"
 msgstr "General VAT Invoice"
+
+#. module: odoo_fapiao
+#: model:ir.model.fields.selection,name:odoo_fapiao.selection__account_move__cn_fapiao_type__general
+#: model_terms:ir.ui.view,arch_db:odoo_fapiao.cn_fapiao_account_move_search
+msgid "General VAT Invoice"
+msgstr "General VAT Invoice"
